@@ -11792,7 +11792,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -12047,7 +12047,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -12115,7 +12115,7 @@ Percentage of individuals making more than $50,000: 24.78%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -12656,7 +12656,7 @@ U+P/B1KwKjX8TqWAAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -13192,7 +13192,7 @@ QyMEAAAA6A2NEAAAAKA3/j894xEi5w1Z6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -13323,7 +13323,7 @@ QyMEAAAA6A2NEAAAAKA3/j894xEi5w1Z6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_raw&#39; data using pandas.get_dummies()</span>
@@ -13373,7 +13373,7 @@ QyMEAAAA6A2NEAAAAKA3/j894xEi5w1Z6AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13399,14 +13399,6 @@ QyMEAAAA6A2NEAAAAKA3/j894xEi5w1Z6AAAAABJRU5ErkJggg==
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Training set has 36177 samples.
 Testing set has 9045 samples.
-</pre>
-</div>
-</div>
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/usr/local/lib/python2.7/site-packages/sklearn/cross_validation.py:44: DeprecationWarning: This module was deprecated in version 0.18 in favor of the model_selection module into which all the refactored classes and functions are moved. Also note that the interface of the new CV iterators are different from that of this module. This module will be removed in 0.20.
-  &#34;This module will be removed in 0.20.&#34;, DeprecationWarning)
 </pre>
 </div>
 </div>
@@ -13451,16 +13443,17 @@ $$ F_{\beta} = (1 + \beta^2) \cdot \frac{precision \cdot recall}{\left( \beta^2 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">fbeta_score</span>
 <span class="c1"># TODO: Calculate accuracy</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span><span class="o">/</span><span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5</span>
-<span class="n">fscore</span> <span class="o">=</span> <span class="n">fbeta_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">),</span><span class="mf">0.5</span><span class="p">)</span>
-
+<span class="n">precision</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># will be 1 because all individuals making more than 50,000 are identified</span>
+<span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span> <span class="o">/</span> <span class="p">((</span><span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">precision</span><span class="p">)</span> <span class="o">+</span> <span class="n">recall</span><span class="p">)</span>
 <span class="c1"># Print the results </span>
 <span class="k">print</span> <span class="s2">&quot;Naive Predictor: [Accuracy score: {:.4f}, F-score: {:.4f}]&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">accuracy</span><span class="p">,</span> <span class="n">fscore</span><span class="p">)</span>
 </pre></div>
@@ -14912,7 +14905,8 @@ pIHx/wFupmz1GMtRhQAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The ada boost model uses a series of learners that individually do not have high predictive power. The model adjusts the weights to different examples after it fits each learner, giving more considerations to the examples that are harder to learn.  When used together, the series of learners give high predictive power.</p>
+<p>The ada boost model learns the data in a number of steps. Each step considers the examples in the data differently. For example, the first step gives equal consideration to every data point. During the second step, the model finds out which data points it predicted incorrectly in the first step, then it focuses more on those data points. Therefore the second step does better than the first step. The third step repeats like the second, focusing more on data points that the second step predicted incorrectly. Each step creates a separate model.</p>
+<p>After the model has finished learning from the training dataset, it can be used to predict results for new examples. For a given datapoint, each model that was created during a training step makes a prediction. The models that had lower training errors will be more influential and carry more votes. The models are combined by votes to give one conclusion for each data point.</p>
 
 </div>
 </div>
