@@ -13692,8 +13692,9 @@ TkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Assuming that the waypoint will never point us backwards and none of the other vehicles will ever be travelling backwards, there are 4 possible states for each of the directional inputs: None, 'forward', 'left', and 'right'.</p>
-<p>4 for waypoint, 2 for light, 4 for vehicle on the left's action, 4 for vehicle on the right's action, 4 for vehicle across the intersection's action. 4 times 2 times 4 times 4 times 4 = 512.
+<p>The waypoint feature only takes on 3 states: 'forward', 'left', and 'right'.</p>
+<p>Assuming that none of the other vehicles will ever be travelling backwards, there are 4 possible states for the directions of other cars: None, 'forward', 'left', and 'right'.</p>
+<p>3 for waypoint, 2 for light, 4 for vehicle on the left's action, 4 for vehicle on the right's action, 4 for vehicle across the intersection's action. 3 times 2 times 4 times 4 times 4 = 384.
 It's possible for an agent to learn within a reasonable time for this size of state space.</p>
 <p>The state space could further be restricted by assuming the other cars will always obey traffic laws. For example, the car on the right is always irrelevant if it obeys the law. This optimization is not neccessary for the agent to learn a successful policy and the assumption may not hold in a more realistic simulation.</p>
 
@@ -18080,6 +18081,13 @@ TkSuQmCC
  -- right : 2.31
  -- left : -19.29</p>
 <p>When the agent needs to go right and it has the green light, since the car to the left is going forward, and there are no cars to the right on on the oncoming direction, there's no chance of crashing into other cars if the agent makes a right. Here right has the highest Q value of 2.31 so it is the correct policy.</p>
+<p>An example where the agent did not have the optimal policy is as follows:
+('forward', 'green', 'left', 'forward', 'left')
+ -- None : 0.00
+ -- forward : 0.00
+ -- right : 0.00
+ -- left : 0.79</p>
+<p>The agent should go forward when the waypoint indicates forward and it has the green light. However the highest Q value was given to turning left.</p>
 
 </div>
 </div>
